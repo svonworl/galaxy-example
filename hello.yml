@@ -10,12 +10,5 @@ outputs:
     hello/the_output
 
 steps:
-  hello:
-    run:
-      class: GalaxyTool
-      command: echo 'Hello' $the_subject > $the_output
-      outputs:
-        the_output:
-          format: txt
 
 
