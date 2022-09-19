@@ -1,0 +1,20 @@
+class: GalaxyWorkflow
+
+doc: Simple workflow that outputs "Hello World"
+
+inputs:
+  the_hello:
+    type: string
+    default: "Hello World"
+
+outputs:
+  the_output:
+    outputSource: cat/out_file1
+
+steps:
+  cat:
+    tool_id: cat1
+    label: "the concatenator"
+    doc: "the concatenator!"
+    in:
+      input1: the_hello
