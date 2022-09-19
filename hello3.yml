@@ -12,6 +12,16 @@ outputs:
 
 steps:
   cat:
-    tool_id: cat1
     in:
       input1: the_input
+    out:
+      out_file1: out_file1
+    run:
+      class: GalaxyTool
+      command: echo $input1 > $out_file1
+      inputs:
+        input1:
+          type: File
+      outputs:
+        out_file1:
+          type: File

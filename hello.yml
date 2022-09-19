@@ -1,5 +1,4 @@
 class: GalaxyWorkflow
-doc: Simple workflow that produces a single file containing "Hello World".
 
 inputs:
   the_subject:
@@ -12,6 +11,10 @@ outputs:
 
 steps:
   hello:
+    in:
+      the_subject: the_subject
+    out:
+      the_output: the_output
     run:
       class: GalaxyTool
       command: echo 'Hello' $the_subject > $the_output

@@ -1,10 +1,11 @@
 class: GalaxyWorkflow
 
-doc: Simple workflow that cats a File.
+doc: Simple workflow that outputs "Hello World"
 
 inputs:
-  the_input:
-    type: File
+  the_hello:
+    type: string
+    default: "Hello World"
 
 outputs:
   the_output:
@@ -14,4 +15,4 @@ steps:
   cat:
     tool_id: cat1
     in:
-      input1: the_input
+      input1: the_hello
