@@ -1,0 +1,28 @@
+class: GalaxyWorkflow
+
+inputs:
+  the_subject:
+    type: string
+    default: "World"
+
+outputs:
+  the_output:
+    outputSource: hello/the_output
+
+steps:
+  hello:
+    in:
+      the_subject: the_subject
+    out:
+      the_output: the_output
+    run:
+      class: GalaxyTool
+      command: echo 'Hello' $the_subject > $the_output
+      inputs:
+        the_subject:
+          type: string
+      outputs:
+        the_output:
+          type: string
+
+
