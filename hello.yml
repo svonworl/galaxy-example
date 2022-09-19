@@ -7,7 +7,8 @@ inputs:
     default: "World"
 
 outputs:
-  the_output: hello/the_output
+  the_output:
+    outputSource: hello/the_output
 
 steps:
   hello:
