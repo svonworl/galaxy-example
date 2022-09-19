@@ -14,7 +14,8 @@ outputs:
     outputSource: cat/out_file1
 steps:
   cat:
-    tool_id: cat_multiple
+    tool_id: cat
     doc: cat doc
     in:
-      input1: the_hello,the_input
+      input1: the_hello
+      input2: the_input
