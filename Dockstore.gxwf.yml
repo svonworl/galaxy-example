@@ -1,21 +1,17 @@
 class: GalaxyWorkflow
-doc: |
-  Simple workflow that no-op cats a file.
+
+doc: Simple workflow that cats a File.
+
 inputs:
   the_input:
     type: File
-    doc: input doc
-  the_hello:
-    type: string
-    optional: true
-    default: "Hello"
+
 outputs:
   the_output:
     outputSource: cat/out_file1
+
 steps:
   cat:
     tool_id: cat1
-    doc: cat doc
     in:
-      input1: the_hello
-      input2: the_input
+      input1: the_input
