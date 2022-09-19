@@ -1,5 +1,4 @@
 class: GalaxyWorkflow
-doc: Simple workflow that produces a single file containing "Hello World".
 
 inputs:
   the_subject:
